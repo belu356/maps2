@@ -63,7 +63,6 @@
     
 
 	function getDistanceFromLatLonInMeters(lat1,lon1,lat2,lon2) {
-		debugger;
 	  var R = 6371; // Radius of the earth in km
 	  var dLat = deg2rad(lat2-lat1);  // deg2rad below
 	  var dLon = deg2rad(lon2-lon1); 
@@ -80,14 +79,22 @@
 	function deg2rad(deg) {
 	  return deg * (Math.PI/180)
 	}
+	debugger;
 	var distances = [5,15,20,30,2,4];
-	
+	var coordinates = [];
+	var origin = {lat: 63.417668368136496, lng: 10.403929352760317};
+
+	for(var i=0;i<distances.length;i++){
+		coordinates.push(getLatLonFromDistance(origin.lat,origin.lng,distances[i]));
+	}
+	heatMap = Maze.heatLayer(coordinates, {maxZoom: 22, max: 1, radius: 20, blur: 20}).addTo(map);
+
 
 	function getLatLonFromDistance(lat1,lon1,distance){
 		let lat2 = lat1;
 		let lon2 = lon1;
 		var diff = 0;
-		var increase = 0.000000000000005;
+		var increase = 0.0000000005;
 		while(diff < distance){
 			if (Math.random()>=0.5){
 				lat2 +=increase;

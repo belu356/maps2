@@ -1,0 +1,31 @@
+.zoom-map {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    display: grid;
+}
+
+.zoom-map button{
+    background: #fff6a7;
+    border-style: double;
+    border-color: #dedede;
+    cursor: pointer;
+}
+.zoom-map button:hover{
+    background: #f4e986;
+}
+
+.heatmap-canvas{
+    transform: scale(1);
+}
+
+#myCarousel{
+    margin-top: 20px;
+    border: 2px solid black;
+}
+img{
+    width: 100%;
+}
+.heatmap{
+    cursor: all-scroll;
+}

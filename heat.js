@@ -75,7 +75,7 @@ function zoom(zoom) {
 });*/
 
 $(function(){
-  $('.container #myCarusel .heatmap #heatplan').droppable({
+  $('.container #myCarusel .carousel-inner .item active .heatmap #heatplan').droppable({
   accept: '.test',
   greedy: true,
   drop: function (event, ui){

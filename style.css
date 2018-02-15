@@ -22,10 +22,30 @@
 #myCarousel{
     margin-top: 20px;
     border: 2px solid black;
+
 }
 img{
     width: 100%;
+ 
 }
 .heatmap{
     cursor: all-scroll;
 }
+
+.container{
+    margin-left: 13%;
+}
+
+.test{
+    width: 47px;
+    height: 44px;
+    border-radius: 46%;
+    background: #8080808c;
+    cursor: move;
+    margin: 4px;
+
+}
+
+
+
+
